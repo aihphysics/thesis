@@ -14,5 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: compile
+    - name: Install dependancies
+      run: sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra biber
+
+    - name: Compile latex
       run: make
