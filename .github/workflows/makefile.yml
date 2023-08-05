@@ -14,9 +14,17 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Update ubuntu
+      run: sudo apt-get update
+
+    - name: Add Inkspace repo
+      run: sudo add-apt-repository ppa:inkscape.dev/stable
+
+    - name: Prepare for install
+      run: sudo apt-get update
+
     - name: Install dependancies
-      run: sudo apt-get update;\
-           sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra biber inkscape
+      run: sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra biber inkscape
 
     - name: Compile latex
       run: make
