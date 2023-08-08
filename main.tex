@@ -43,6 +43,7 @@
 \usepackage{graphicx}
 \usepackage{svg}
 \usepackage{hyperref}
+\usepackage{amsmath}
 \hypersetup{
     colorlinks=false,
     breaklinks=true
@@ -58,7 +59,7 @@
 
 % biblography formatting
 % NOTE: At the moment both URL and DOI will be displayed, if you have a bib entry that has both URL and DOI please remove the URL so that only one link is displayed, in this case to the DOI. 
-\usepackage[style=authoryear,backend=biber,url=true, doi=true, sorting=nyt, natbib=true]{biblatex}
+\usepackage[style=numeric, backend=biber, url=true, doi=true, sorting=nyt, natbib=true, hyperref]{biblatex}
 \usepackage{bibentry}
 \addbibresource{ref.bib}
 
