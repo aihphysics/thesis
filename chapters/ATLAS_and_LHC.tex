@@ -12,16 +12,28 @@
 
 
 \section{The Large Hadron Collider}
-The Large Hadron Collider (LHC) is a modern proton-proton synchrotron located at the CERN complex, outside of Meyrin, Switzerland. At a circumference of approximately 27km the LHC is currently the largest particle accelerator on the planet, and similarly produces the highest centre-of-mass energies for pp collisions, reaching $\sqrt{s}=13\text{TeV}$. The LHC was constructed from 1998-2008 in the tunnel previously occupied by the Large Electron-Positron Collider (LEP). It extends from from the CERN site, across the French border towards the Jura Mountains and round returning through Geneve and Meyrin. It is positioned on a plane inclined at $1.41\%$ between 45-175 metres underground, a measure to protect both the experimental recordings from a large fraction of cosmic ray interference and the surface from any hazardous emissions from either the particle collisions or the synchrotron radiation.
+The Large Hadron Collider (LHC) is a modern proton-proton synchrotron located at the CERN complex, outside of Meyrin, Switzerland. At a circumference of approximately 27km the LHC is currently the largest particle accelerator on the planet, and similarly produces the highest centre-of-mass energies for $pp$ collisions, reaching $\sqrt{s}=13\text{TeV}$. The LHC was constructed from 1998-2008 in the tunnel previously occupied by the Large Electron-Positron Collider (LEP). It extends from from the CERN site, across the French border towards the Jura Mountains and round returning through Geneve and Meyrin. It is positioned on a plane inclined at $1.41\%$ between 45-175 metres underground, a measure to protect both the experimental recordings from a large fraction of cosmic ray interference and the surface from any hazardous emissions from either the particle collisions or the synchrotron radiation.
 
 The LHC is supported by a number of smaller accelerator systems designed to provide proton bunches of the correct spacing and energy, these are visible in figure \ref{fig:accel_complex}. The acceleration process begins with the injection of Hydrogen anions ($\text{H}^{-}$) into LINAC\footnote{This was LINAC 2 until 2020, reaching $50\text{MeV}$. During Long Shutdown 2 (LS2) this was obsolesced by LINAC 4}, which provides an acceleration to energies of $160\text{MeV}$ before the beam is passed on the Proton Synchrotron Booster (PSB)\footnote{\href{https://cds.cern.ch/journal/CERNBulletin/2016/32/News\%20Articles/2201549?ln=en}{idk psb}}. This continuous beam from LINAC is stripped of electrons and split consecutively amongst the four PSB rings, accelerated to $1.4\text{GeV}$, and injected into the Proton Synchrotron (PS). PS produces bunches spaced by $25\text{ns}$, accelerates these to $25\text{GeV}$, and passes them over to the Super Proton Synchrotron (SPS) for the final energy increase up to $450\text{GeV}$.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[]{figures/lhc_and_atlas/CCC-v2022.png}
+    \caption{CERN Accelerator Complex schematic \cite{Lopienska:2800984}. }
+    \label{fig:accel_complex}
+\end{figure}
+Bunches inserted from SPS into the the LHC are brought from $450\text{GeV}$ up to $6.8\text{TeV}$ over a timespan of approximately 20 minutes. This is driven by the 16 RF cavities around the LHC ring, oscillating at $400\text{MHz}$ each providing up to $2\text{MV}$ of acceleration. The LHC beampipe is a dual-core design allowing bunches to travel in different directions allowing the CoM to coincide with the lab frame of a detector. For a single turn through the LHC, a proton bunch will pass through the magnetic field of 1232 superconducting dipole magnets. The magnets are of Niobium-titanite construction, are held at 1.9K, and produce a field of $\sim8.3\text{T}$. In order to amplify luminosity at the interaction point a focussing effect is produced by the 474 quadropole magnets, arranged into FODO lattices positioned throughtout the circumference.
+
+There are 8 experiments that are part of the LHC, 4 of which are positioned around the circumference. These 4 are ATLAS, LHCb, CMS, and ALICE, located at points 1, 8, 5, and 2, respectively. These experiments are collectively engaged in Run 3 of the LHC. After commissioning and a magnet quench incident in 2008, the LHC entered full operation on 20 November 2009 with first collisions at $7\text{TeV}$ occuring on 30 March 2010. Run 1 concluded in early 2013, delivering a total integrated luminosity of $22.8\text{fb}^{-1}$. Run 2 began in 2015 and extended into 2018, raising the collision energy to $13\text{TeV}$, and delivering a total of $140\text{fb}^{-1}$. After LS2\footnote{2018-2022} and the upgrades to both the LHC and detectors associated with this, the LHC began Run 3 operations with an increase in the collision energy, again, to $13.6\text{TeV}$, and is currently ongoing in 2024. After Run 3, the LHC enters Long Shutdown 3 (LS3) for a series of upgrades to prepare for the HL-LHC phase where there is a roughly eight-fold increase in peak luminosity planned, and the total integrated luminosity over the HL-LHC period from Run 4 to the end of Run 6 planned in 2038 will be $4000\text{fb}^{-1}$.
 
 
-% https://physics.stackexchange.com/questions/474122/how-is-a-proton-beam-separated-into-bunches-in-a-particle-accelerator
-%%https://cds.cern.ch/record/446600/
-%% "we must make sure that the particle always sees an accelerating voltage at the gap, so the RF frequency must always be an integer multiple (h) of the revolution frequency."
-%% https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.buckets_and_bunches
+%% https://twiki.cern.ch/twiki/bin/view/AtlasPublic/LuminosityPublicResults#Integrated_luminosity_summary_pl
+
+% h##ttps://physics.stackexchange.com/questions/474122/how-is-a-proton-beam-separated-into-bunches-in-a-particle-accelerator
+%%h##ttps://cds.cern.ch/record/446600/
+%% ##"we must make sure that the particle always sees an accelerating voltage at the gap, so the RF frequency must always be an integer multiple (h) of the revolution frequency."
+%% ##https://www.lhc-closer.es/taking_a_closer_look_at_lhc/0.buckets_and_bunches
 %% https://home.cern/science/accelerators
+%%https://cds.cern.ch/record/1982419/files/61-100%20Holzer.pdf
 
 
 %%SPS, LHC, fills reaching an energy of 13.6TeV, 6.8TeV per beam
@@ -41,30 +53,26 @@ The LHC is supported by a number of smaller accelerator systems designed to prov
 
 %Points to make
 %\begin{itemize}
-%    \item precise location
+%    \item precise location x 
 %    \item geometry, straight and curved sections 
-%    \item points and active experiments
-%    \item full accelerator complex rundown, energies, etc
-%    \item run details peak luminosities
-%    \item upgrades and futures
-%    \item effects of high energies, pileup, etc
-%    \item bunch details, bunch grouping, injection etc
-%    \item cosmics and radiation protection
+%    \item points and active experiments x
+%    \item full accelerator complex rundown, energies, etc x
+%    \item run details peak luminosities x
+%    \item upgrades and futures *
+%    \item effects of high energies, pileup, etc x
+%    \item bunch details, bunch grouping, injection etc x
+%    \item cosmics and radiation protection x
 %\end{itemize}
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[]{figures/lhc_and_atlas/CCC-v2022.png}
-    \caption{CERN Accelerator Complex schematic \cite{Lopienska:2800984}. }
-    \label{fig:accel_complex}
-\end{figure}
 
 
 
 
 \section{The ATLAS Detector}
 \subsection{Overview}
-The ATLAS Detector[CITATION] as a general-purpose detector with cylindrical geometry and a forwards-backwards symmetry. It has nearly complete coverage, approaching $4\pi$, in solid angle around the interaction point (IP) which is located centrally within the detector layout.
+The ATLAS Detector[CITATION] as a general-purpose detector with cylindrical geometry and a forwards-backwards symmetry. It has nearly complete coverage, approaching $4\pi$, in solid angle around the interaction point (IP) which is located centrally within the detector layout. The detector is located at Point 1 on the LHC ring, approximately $100m$ below the surface, with the ATLAS control room and supporting infrastructure located directly above at the Meyrin site of CERN.
+
+There are a number of main subsystems within the ATLAS detector. Starting centremost radially, closest to the interaction point there is the Inner Dectector (ID) comprised of the Pixel Detector, the Semi-Conductor Tracker (SCT), and the Transition Radiation Tracker (TRT). This is used to provide initial tracking information 
 %%\begin{itemize}
 %%    \item Basic detector details.
 %%    \item Some collaboration details.
