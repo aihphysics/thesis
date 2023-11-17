@@ -18,7 +18,7 @@ The LHC is supported by a number of smaller accelerator systems designed to prov
 \begin{figure}[!h]
     \centering
     \includegraphics[]{figures/lhc_and_atlas/CCC-v2022.png}
-    \caption{CERN Accelerator Complex schematic \cite{Lopienska:2800984}. }
+    \caption{CERN Accelerator Complex schematic \cite{lopienska2022}. }
     \label{fig:accel_complex}
 \end{figure}
 Bunches inserted from SPS into the the LHC are brought from $450\text{GeV}$ up to $6.8\text{TeV}$ over a timespan of approximately 20 minutes. This is driven by the 16 RF cavities around the LHC ring, oscillating at $400\text{MHz}$ each providing up to $2\text{MV}$ of acceleration. The LHC beampipe is a dual-core design allowing bunches to travel in different directions allowing the CoM to coincide with the lab frame of a detector. For a single turn through the LHC, a proton bunch will pass through the magnetic field of 1232 superconducting dipole magnets. The magnets are of Niobium-titanite construction, are held at 1.9K, and produce a field of $\sim8.3\text{T}$. In order to amplify luminosity at the interaction point a focussing effect is produced by the 474 quadropole magnets, arranged into FODO lattices positioned throughtout the circumference.
@@ -71,8 +71,17 @@ There are 8 experiments that are part of the LHC, 4 of which are positioned arou
 \section{The ATLAS Detector}
 \subsection{Overview}
 The ATLAS Detector[CITATION] as a general-purpose detector with cylindrical geometry and a forwards-backwards symmetry. It has nearly complete coverage, approaching $4\pi$, in solid angle around the interaction point (IP) which is located centrally within the detector layout. The detector is located at Point 1 on the LHC ring, approximately $100m$ below the surface, with the ATLAS control room and supporting infrastructure located directly above at the Meyrin site of CERN.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/lhc_and_atlas/ATLAS_DET_SLICE.png}
+    \caption{Cross-Sectional slice of the ATLAS detector \cite{Mehlhase:2770815}. }
+    \label{fig:detslice}
+\end{figure}
+There are a number of main subsystems within the ATLAS detector, a cross-section of the detector outlining their positions is shown in \ref{fig:detslice} . Starting centremost radially, closest to the interaction point there is the Inner Dectector (ID) comprised of the Pixel Detector, the Semi-Conductor Tracker (SCT), and the Transition Radiation Tracker (TRT). This is used to provide tracking information for all charged particles created in an event, a $pp$ collision. The ID is immersed in a solenoidal magnet, producing a 2T field to generate a curvature in charged particle paths. Outside of this, the calorimeter systems begin with the Electromagnetic Calorimeter (ECal). The ATLAS ECal is a LAr Calorimeter in both the Barrel and Endcap Regions, and is used for precision measurement of Electron and Photon signals. The Hadronic Calorimeter (HCal) systems follow the ECal, these are designed for the measurement of strongly interacting particles which traditionally pass through the ECal and form showers further out from the interaction point. Three main components form the HCal, the Tile Calorimeter (TileCal) in the barrel region, and LAr calorimeters form the detector setup. in the endcap and forward regions. Last in the sequence are the Muon Systems (MS), placed in the outermost region to collect muons that typically penetrate through the earlier stages of the detector, or any other charged particles that may leak from the other inner stages. The MS is constructed from two main components in the barrel.
 
-There are a number of main subsystems within the ATLAS detector. Starting centremost radially, closest to the interaction point there is the Inner Dectector (ID) comprised of the Pixel Detector, the Semi-Conductor Tracker (SCT), and the Transition Radiation Tracker (TRT). This is used to provide initial tracking information 
+
+
+
 %%\begin{itemize}
 %%    \item Basic detector details.
 %%    \item Some collaboration details.
@@ -83,27 +92,81 @@ There are a number of main subsystems within the ATLAS detector. Starting centre
 
 
 \subsection{Coordinate system and common variables}
+To perform physics analysis at a $pp$ experiement, several variables must be defined to accurately describe the physics objects that will be detected. The Cyclindrical geometry of ATLAS lends towards using a cylindrical coordinate system for analysing events and is defined from a cartesian system centered around the interaction point. The $x$-axis points towards the centre of the LHC ring, the $y$-axis directly upwards, and the $z$-axis along the beamline. The Azimuthal angle $\phi$ in this cylindrical system begins at the $x$-axis, and the polar angle $\theta$ at the $z$-axis.
+
+\begin{itemize}
+    \item \textbf{Energy $E$.} The energy of particles that are produced in reactions. This can be assessed as the particle with deposit energy into the calorimeter materials as it travels outwards from the interaction point.
+    \item \textbf{Transverse Momentum $p_{T}$.} This is the component of a particle momentum in the plane transverse to the beam line. In ATLAS this is used in preference to overall momentum on the basis that it is a conserved variable and is more informative of the physics given the typical kinematic distribution of events that would be expected in a $pp$ collision of the nature at the LHC.
+    \item \textbf{Invariant mass $m$.} Invariant mass can be used in the context of single particles or systems of them. Calculating the invariant mass of selected combinations of particles can yield information on the resonant particles within an event or interaction. This is typically calculated through combining information collected on the momentum and energy of a particle, or collecton of particles.
+    \item \textbf{ Rapidity $y$, Pseudorapidity $\eta$, and Distance $\Delta R$.} These three variables help define a particle position after an interaction. Rapidity is an angular and relativistic measure of velocity, that can be used to define $$y = -\frac{1}{2} \ln{\frac{E+p_{z}}{E-{p_{z}}} }.$$ Beneficially, rapidity differences are lorentz-invariant. When the particle masses are far smaller than the energy the rapidity can be approximated to the pseudorapidity, a more easily calculable and purely angular variable defined as $$\eta = -\ln\tan{\frac{\theta}{2}}.$$ When combined with the azimuthal angle $\phi$, a lorentz-invariant distance measure appropriate for the cylindrical geometry can be defined; $$\Delta R = \sqrt{\Delta \eta^{2} + \Delta \phi^{2}}.$$
+    \item \textbf{ Tracking Parameters $z_{0}$, $d_{0}$, and $\frac{q}{p}$ } When combined with the beamspot position, $\theta$ and $\phi$, these 5 variables are used to fully define a track in ATLAS. $z_{0}$ is the longitudinal impact parameter, measuring the closest approach of the track to the beamspot along the axis of the beam, $d_{0}$ distance of closest approach of a track to the beamline in transverse plane, and $\frac{q}{p}$ is the charge-momentum ratio of a reconstructed track.
+    \item \textbf{ Transverse displacement $L_{xy}$, and lifetime $\tau$.} $L_{xy}$ is the transverse displacement of a point, typically the vertex of a particle decay, from the beamline. Due to the relativistic nature of particles and the fact $L_{xy}$ is not a variable natural to the rest frame of any decaying particle, it is preferable to use the pseudo-proper lifetime $\tau$ in many cases; $$ \tau = \frac{L_{xy}m_{parent}}{c\cdot p_{T}} $$
+
+
+
+\end{itemize}
+    
 %%\begin{itemize}
-%%    \item Rapidity
-%%    \item Pseudorapidity
-%%    \item Azimuthal angle
-%%    \item eta-phi space
-%%    \item impact parameters
-%%    \item Other varibles required for track definition
-%%    \item Common kinematic and analysis variables
+%%    \item Rapidity and Pseudorapidity *
+%%    \item Azimuthal, eta-phi space *
+%%    \item impact parameters *
+%%    \item Common kinematic and analysis variables*
 %%\end{itemize}
 
-%%\subsection{Inner Detector}
-%%\begin{itemize}
-%%    \item IBL
-%%    \item SCT
-%%    \item Pixel
-%%    \item Transition Radiation Tracker
-%%\end{itemize}
+\subsection{Inner Detector}
+
+The ATLAS Inner Detector (ID), the first detector subsystem, provides the backbone of tracking and vertexing information for events recorded during LHC runs. Starting at a radius of $3.3\text{cm}$ the detector extends out to $1.05\text{m}$ and is $6.2\text{m}$ long. Innermost to this system, $3.3\text{cm}$ from the beamline, is the pixel detector (PIX/IBL), consisting of 4 layers of pixel layers, the innermost Insertable B-Layer installed in 2014. The IBL has a smaller pixel size, of $50\times250\mu\text{m}$, than the other pixel layers with $50\times400\mu\text{m}$, and was inserted to increase the tracking resolution of the ID. PIX/IBL provides $92$ million readout channels, with $1.9\text{m}^{2}$ of silicon area.
+
+%%* first radially from the centre
+%%6.2 metres long
+%%2.1 metres in diameter
+%%thickness?
+%hits in this region of the detector produce the seeds for reconstructing tracks and vertices
+%The ID is the backbone of tracking and vertexing in atlas
+
+%% Digitisation in sensors often done with 'Time Over Threshold' this is turned into 1's 
+
+There's 3 main layers, 
+
+the pixel detector,
+    four layers
+    92m channels
+    1.9m2 of silicon area
+    15kW of power consumption
+    innermost layer IBL -> 3.3cm from the beamline, installed in 2014 to enhance tracking
+    pixels are 50x250um in the IBL
+    pixels are 50x400um on the outer 
+    the four barrel layers have 1736 modules
+    the three end-cap discs have 288 modules
+
+SCT - SemiConductor Tracker
+    silicon strip detector, 6.3 million channels
+    4088 barrel modules on 4 cylinder layers
+    4 detector wafers with 768 strips
+    80um pitch
+    Endcap is two sets of 9 disks
+        trapezoidal detector wafers with 56.9-90.4um pitch
+    2 planes are offset by 40mrad, this gives stereo
+
+
+TRT - thin-walled drift tubes
+    300,000 of them, 4mm in diameter
+    12m3 of volume
+    50,000 straws in barrel
+    the rest are in the endcaps
+    this gives information on particle type
+
+    
+How do we ID in the inner detector? -> Ionisation-loss curves -> offline problem though no?
+
+
+the entire inner detector will be replaced by the all-silicon ITk -> extension of up to 9 hits for most particles in run 4, coverage up to eta 4 - https://indico.cern.ch/event/803258/contributions/3582845/attachments/1962390/3265284/259-Buttar-ATLASPixelsOverview-v3.pdf
+
+add both those Inner detector diagrams
+
 %%\subsection{Calorimetry}
-%%\subsubsection{LAr Calormiter}
+%%\subsubsection{Electromagnet Calormiter}
 %%\subsubsection{Hadronic Calorimeter}
-%%\subsubsection{Endcap}
 %%\subsection{Muon Systems}
 %%\begin{itemize}
 %%    \item I don't even know yet
