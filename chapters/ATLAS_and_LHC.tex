@@ -115,7 +115,22 @@ To perform physics analysis at a $pp$ experiement, several variables must be def
 
 \subsection{Inner Detector}
 
-The ATLAS Inner Detector (ID), the first detector subsystem, provides the backbone of tracking and vertexing information for events recorded during LHC runs. Starting at a radius of $3.3\text{cm}$ the detector extends out to $1.05\text{m}$ and is $6.2\text{m}$ long. Innermost to this system, $3.3\text{cm}$ from the beamline, is the pixel detector (PIX/IBL), consisting of 4 layers of pixel layers, the innermost Insertable B-Layer installed in 2014. The IBL has a smaller pixel size, of $50\times250\mu\text{m}$, than the other pixel layers with $50\times400\mu\text{m}$, and was inserted to increase the tracking resolution of the ID. PIX/IBL provides $92$ million readout channels, with $1.9\text{m}^{2}$ of silicon area.
+%% GOOD PIXEL REFERENCE RUN1 - https://cds.cern.ch/record/1262789/files/EurPhysJC.3FBE7E53d01.pdf
+%% GOOD PIXEL REFERENCE RUN2 - https://cds.cern.ch/record/1985432/files/ATL-INDET-PROC-2015-001.pdf
+%% GOOD PIXEL REFERENCE RUN3 - https://cds.cern.ch/record/2851225/files/ATL-INDET-PROC-2023-001.pdf
+%% APPROVED PLOTS - https://twiki.cern.ch/twiki/bin/view/AtlasPublic/ApprovedPlotsATLASDetector#:~:text=ATLAS%20Run%2D3%20Detector%20Status%20(from%20May%202023),-Subdetector&text=The%20Pixel%20status%20includes%20the,to%20the%20number%20of%20cells.
+The ATLAS Inner Detector (ID), the first detector subsystem, provides the backbone of tracking and vertexing information for events recorded during LHC runs. Starting at a radius of $3.3\text{cm}$ the detector extends out to $1.05\text{m}$ and is $6.2\text{m}$ long. Innermost to this system, $3.3\text{cm}$ from the beamline, is the pixel detector (PIX/IBL), consisting of 4 layers of pixel layers, the innermost Insertable B-Layer (IBL) was installed in 2014. The IBL has a smaller pixel size, of $50\times250\mu\text{m}$, than the other pixel layers with $50\times400\mu\text{m}$, and was inserted to increase the tracking resolution of the ID. PIX/IBL provides $92$ million readout channels, $12$ million from the IBL alone, with a total $1.9\text{m}^{2}$ of silicon area.
+
+%% GOOD SCT Run 2 - https://iopscience.iop.org/article/10.1088/1748-0221/9/08/P08009/pdf
+%% SCT MODULES https://www.sciencedirect.com/science/article/abs/pii/S0168900207007644?via%3Dihub 
+%% END MODULES https://www.sciencedirect.com/science/article/abs/pii/S0168900207003270?via%3Dihub
+%% Barrel modules - https://cds.cern.ch/record/974073/files/indet-pub-2006-005.pdf
+%% MORE - https://www.sciencedirect.com/science/article/pii/S0168900207007644?ref=cra_js_challenge&fr=RR-1
+
+The second subsystem of the ID is the SemiConductor Tracker (SCT). As of Run 3 this is operating with 6.3 million readout channels consisting of silicon 'micro-strips', in 4088 modules arranged across 4 barrel layers (2112 modules) and 18 endcap disks, nine each side ($988\times 2$), covering an area of $60\text{m}^{2}$. Detector planes are offset by $40\text{mrad}$ to assist in providing a readout accuracy as tight as $25\mu\text{m}$. All modules in the barrel region are identical, they consist of four sensors paired off and connected back to back. Across the four sensors in a module there are 3072 readout strips (768 per sensor), pitched identically at $80\mu\text{m}$. The endcap modules have a variable micro-strip pitch dependent on their position as a function of their wedge-like geometry, though still have 768 readout strips per sensor.
+
+%% TRT 1 - https://cds.cern.ch/record/2139567/files/ATL-INDET-PROC-2016-001.pdf
+The outermost section of the ID consists of the Transition Radiation Tracker (TRT). This is constructed from 300,000 thin-walled drift tubes of $4\text{mm}$ diameter with a total volume of $12\text{m}^{3}$. In the barrel region the straws are aligned parallel to the beam axis and extend from 560mm to 1080mm in radius. In the endcap region, the straws are alinged perperndicularly. Particle identification is performed with a combination of ionisation-loss curve analyisis - CHECK, and using the probability of certain particles to produce readout pulses in the TRT that cross certain low and high $\text{eV}$ thresholds, LT and HT respectively. The HT threshold for example is used for electrion-pion discrimination. 
 
 %%* first radially from the centre
 %%6.2 metres long
@@ -126,43 +141,43 @@ The ATLAS Inner Detector (ID), the first detector subsystem, provides the backbo
 
 %% Digitisation in sensors often done with 'Time Over Threshold' this is turned into 1's 
 
-There's 3 main layers, 
-
-the pixel detector,
-    four layers
-    92m channels
-    1.9m2 of silicon area
-    15kW of power consumption
-    innermost layer IBL -> 3.3cm from the beamline, installed in 2014 to enhance tracking
-    pixels are 50x250um in the IBL
-    pixels are 50x400um on the outer 
-    the four barrel layers have 1736 modules
-    the three end-cap discs have 288 modules
-
-SCT - SemiConductor Tracker
-    silicon strip detector, 6.3 million channels
-    4088 barrel modules on 4 cylinder layers
-    4 detector wafers with 768 strips
-    80um pitch
-    Endcap is two sets of 9 disks
-        trapezoidal detector wafers with 56.9-90.4um pitch
-    2 planes are offset by 40mrad, this gives stereo
-
-
-TRT - thin-walled drift tubes
-    300,000 of them, 4mm in diameter
-    12m3 of volume
-    50,000 straws in barrel
-    the rest are in the endcaps
-    this gives information on particle type
-
-    
-How do we ID in the inner detector? -> Ionisation-loss curves -> offline problem though no?
+%%There's 3 main layers, 
+%%
+%%the pixel detector,
+%%    four layers
+%%    92m channels
+%%    1.9m2 of silicon area
+%%    15kW of power consumption
+%%    innermost layer IBL -> 3.3cm from the beamline, installed in 2014 to enhance tracking
+%%    pixels are 50x250um in the IBL
+%%    pixels are 50x400um on the outer 
+%%    the four barrel layers have 1744 modules
+%%    the three end-cap discs have 288 modules
+%%
+%%SCT - SemiConductor Tracker
+%%    silicon strip detector, 6.3 million channels
+%%    4088 barrel modules on 4 cylinder layers
+%%    4 detector wafers with 768 strips
+%%    80um pitch
+%%    Endcap is two sets of 9 disks
+%%        trapezoidal detector wafers with 56.9-90.4um pitch
+%%    2 planes are offset by 40mrad, this gives stereo
 
 
-the entire inner detector will be replaced by the all-silicon ITk -> extension of up to 9 hits for most particles in run 4, coverage up to eta 4 - https://indico.cern.ch/event/803258/contributions/3582845/attachments/1962390/3265284/259-Buttar-ATLASPixelsOverview-v3.pdf
-
-add both those Inner detector diagrams
+%%TRT - thin-walled drift tubes
+%%    300,000 of them, 4mm in diameter
+%%    12m3 of volume
+%%    50,000 straws in barrel
+%%    the rest are in the endcaps
+%%    this gives information on particle type
+%%
+%%    
+%%How do we ID in the inner detector? -> Ionisation-loss curves -> offline problem though no?
+%%
+%%
+%%the entire inner detector will be replaced by the all-silicon ITk -> extension of up to 9 hits for most particles in run 4, coverage up to eta 4 - https://indico.cern.ch/event/803258/contributions/3582845/attachments/1962390/3265284/259-Buttar-ATLASPixelsOverview-v3.pdf
+%%
+%%add both those Inner detector diagrams
 
 %%\subsection{Calorimetry}
 %%\subsubsection{Electromagnet Calormiter}
